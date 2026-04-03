@@ -1,0 +1,170 @@
+header ul{
+    justify-content: space-between;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li{
+    float: left;
+}
+
+.title{
+    text-align: center;
+}
+h2{
+    font-size: 2.3rem;
+    color: #111;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    background: #f4f4f4;
+}
+
+main{
+    flex: 1;
+}
+
+.detail{
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+.header {
+  background: #111;
+  color: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.nav-item {
+    margin-left: 30px;
+
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.nav-about {
+  float: right;
+  margin-right: 20px;
+}
+
+.top-nav .nav-menu a:hover {
+    color: #12c495;
+}
+.top-nav .nav-menu li {
+    margin-left: 30px;
+}
+.input-area{
+    width: 400px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.input-area::placeholder{
+    color: #666;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.input-area:focus::placeholder {
+  opacity: 0.4;
+  color: #999;
+}
+
+.ask-btn {
+    width: 50px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ask-btn:active {
+  transform: translateY(0);
+}
+
+.ask-btn:hover {
+  transform: translateY(-1.5px) scale(1.05);
+  box-shadow: 0 2px 7px rgba(102, 126, 234, 0.6);
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  margin-bottom: 12px;
+}
+
+.footer-link {
+  color: #FFD700;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-mail{
+  color: gainsboro;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #f0e8d8;
+}
+.devimage img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  /*float: inline-start;*/
+}
+.body-text{
+  text-align: center;
+  color: #111;
+}
+.card {
+background: #fff;
+border: 1px solid #ddd;
+border-radius: 8px;
+padding: 1.5rem;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,192 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Tools Hub – Supercharge Your Workflow</title>
+<style>
+:root {
+--bg: #0e0e0e;
+--card: #161616;
+--accent: #00e5ff;
+--text: #ffffff;
+--subtle: #888;
+}
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.6;
+}
+header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1.2rem 2rem;
+background: rgba(22, 22, 22, 0.6);
+backdrop-filter: blur(10px);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+header h1 {
+font-size: 1.5rem;
+letter-spacing: 1px;
+color: var(--accent);
+}
+nav a {
+margin-left: 1.5rem;
+color: var(--text);
+text-decoration: none;
+font-weight: 500;
+transition: color 0.3s;
+}
+nav a:hover {
+color: var(--accent);
+}
+.hero {
+padding: 5rem 2rem 4rem;
+text-align: center;
+max-width: 800px;
+margin: auto;
+}
+.hero h2 {
+font-size: 2.8rem;
+margin-bottom: 1rem;
+}
+.hero p {
+font-size: 1.2rem;
+color: var(--subtle);
+margin-bottom: 2rem;
+}
+.cta {
+display: inline-block;
+background: var(--accent);
+color: #000;
+padding: 0.8rem 2rem;
+border-radius: 30px;
+font-weight: 700;
+text-decoration: none;
+transition: transform 0.3s;
+}
+.cta:hover {
+transform: scale(1.05);
+}
+.tools {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 2rem;
+padding: 3rem 2rem;
+max-width: 1200px;
+margin: auto;
+}
+.tool-card {
+background: var(--card);
+border-radius: 12px;
+padding: 2rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.tool-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
+}
+.tool-card h3 {
+margin-bottom: 0.8rem;
+color: var(--accent);
+}
+.tool-card p {
+color: var(--subtle);
+margin-bottom: 1.2rem;
+flex-grow: 1;
+}
+.tool-card a {
+align-self: flex-start;
+background: transparent;
+border: 2px solid var(--accent);
+color: var(--accent);
+padding: 0.5rem 1.2rem;
+border-radius: 20px;
+text-decoration: none;
+font-weight: 600;
+transition: background 0.3s, color 0.3s;
+}
+.tool-card a:hover {
+background: var(--accent);
+color: #000;
+}
+footer {
+text-align: center;
+padding: 2rem 1rem;
+color: var(--subtle);
+font-size: 0.9rem;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>AI Tools Hub</h1>
+<nav>
+<a href="#tools">Tools</a>
+<a href="#docs">Docs</a>
+<a href="#api">API</a>
+<a href="#pricing">Pricing</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>One Hub. Every AI Tool You Need.</h2>
+<p>From text generation to image upscaling—integrate powerful AI models into your projects in minutes.</p>
+<a class="cta" href="#tools">Explore Tools</a>
+</section>
+
+<section id="tools" class="tools">
+<div class="tool-card">
+<h3>Text Generator</h3>
+<p>Create blog posts, emails, code comments, and more with a cutting-edge language model.</p>
+<a href="/text-generator">Try Now</a>
+</div>
+<div class="tool-card">
+<h3>Image Upscaler</h3>
+<p>Enlarge images up to 4× without losing quality using state-of-the-art super-resolution.</p>
+<a href="/upscaler">Try Now</a>
+</div>
+<div class="tool-card">
+<h3>Background Remover</h3>
+<p>Remove or replace backgrounds in seconds—perfect for product photos and portraits.</p>
+<a href="/bg-removal">Try Now</a>
+</div>
+<div class="tool-card">
+<h3>Code Reviewer</h3>
+<p>Get instant feedback, security checks, and refactoring suggestions for any codebase.</p>
+<a href="/code-review">Try Now</a>
+</div>
+<div class="tool-card">
+<h3>Voice Cloner</h3>
+<p>Clone any voice with just 30 seconds of audio and generate natural speech in 40+ languages.</p>
+<a href="/voice-cloner">Try Now</a>
+</div>
+<div class="tool-card">
+<h3>Data Anonymizer</h3>
+<p>Automatically detect and redact PII in documents and datasets before sharing or analysis.</p>
+<a href="/anonymizer">Try Now</a>
+</div>
+</section>
+
+<footer>
+© <span id="year"></span> AI Tools Hub • Built for developers, creators, and everyone in between.
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
