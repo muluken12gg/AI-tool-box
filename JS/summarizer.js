@@ -16,3 +16,7 @@ async function summarize() {
 
                 document.getElementById("summarized").innerText = data.answer;
             }
+
+if (!localStorage.getItem("user_id")) {
+    localStorage.setItem("user_id", crypto.randomUUID());
+    }
