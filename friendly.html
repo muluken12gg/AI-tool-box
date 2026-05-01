@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Jokester</title>
-        <link rel = "stylesheet" href = "CSS/style.css">
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chat</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="top-nav">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="text_generator.html" class="nav-link">Text Generator</a></li>
+          <li class="nav-item"><a href="friendly.html" class="nav-link"><strong>AI Chat</strong></a></li>
+          <li class="nav-item"><a href="topic.html" class="nav-link">Topic AI</a></li>
+          <li class="nav-item"><a href="summarizer.html" class="nav-link">Summarizer</a></li>
+          <li class="nav-item"><a href="code-generator.html" class="nav-link">Code Generator</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <body>
-
-      <header class = "header">
-        <div class = "container">
-          <nav class = "top-nav">
-            <ul class = "nav-menu">
-                <li class = "nav-item"><a href="index.html" class = "nav-link">Home</a></li>
-                <li class = "nav-item"><a href="friendly.html" class = "nav-link"><b>Jokester</b></a></li>
-                <li class = "nav-item"><a href="topic.html" class = "nav-link">Topic AI</a></li>
-                <li class = "nav-item"><a href="summarizer.html" class = "nav-link">Summarizer</a></li>
-                <li class = "nav-item"><a href="code-generator.html" class = "nav-link">Code-Generator</a></li>
-            </ul>
-          </nav>
+  <main>
+    <div class="container">
+      <section class="section">
+        <div class="title">
+          <h2>Chat with MukAI</h2>
+          <p class="detail">A context-aware chat assistant that remembers your conversation and replies like a human.</p>
         </div>
-      </header>
-      <main>
-      <div class = "title">
-        <h2>Jokester</h2>
+
+        <div class="hero-card chat-card">
+          <div class="chat-header">
+            <div>
+              <h3>AI Chat</h3>
+              <p>Keep the conversation going and refresh without losing chat history.</p>
+            </div>
+            <button id="clear-chat" class="clear-btn" type="button">Clear chat</button>
+          </div>
+
+          <div id="chat-history" class="chat-history">Loading conversation...</div>
+
+          <div class="chat-form">
+            <input id="question" placeholder="Ask anything..." class="input-area">
+            <button id="send-btn" class="ask-btn" type="button">Send</button>
+          </div>
         </div>
+      </section>
+    </div>
+  </main>
 
-        <input id = "question" placeholder = "You can ask anything you want buddy" class = "input-area">
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">MukAI</div>
+      <div class="footer-links">
+        <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+        <a href="privacy-policy.html" class="footer-link">Terms of Service</a>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:mulukentsegaye216@gmail.com" class="footer-mail">✉️ mulukentsegaye216@gmail.com</a>
+      </div>
+    </div>
+  </footer>
 
-        <button onclick = "friendly()" class = "ask-btn">Ask</button>
-
-        <p id = "answer" class = "card"></p>
-      </main>
-
-        <script src = "JS/friendly.js"></script>
-    </body>
+  <script src="JS/friendly.js"></script>
+</body>
 </html>

@@ -1,10 +1,10 @@
-async function generate() {
-    const outputEl = document.getElementById("code");
+async function chat() {
+    const outputEl = document.getElementById("text");
     const prompt = document.getElementById("prompt").value;
     outputEl.innerText = "Loading...";
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/generator", {
+        const response = await fetch("http://127.0.0.1:8000/text_generator", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -1,22 +1,29 @@
 async function summarize() {
-                const text = document.getElementById("text").value;
+    const outputEl = document.getElementById("summarized");
+    const text = document.getElementById("text").value;
+    outputEl.innerText = "Loading...";
 
-                const response = await 
-                fetch("http://127.0.0.1:8000/summarize",
-                    {
-                        method: "POST",
-                        headers:{
-                            "Content-Type" : "application/json"
-                        },
-                        body: JSON.stringify({text})
-                    }
-                );
+    try {
+        const response = await fetch("http://127.0.0.1:8000/summarize", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ text })
+        });
 
-                const data = await response.json();
+        if (!response.ok) {
+            throw new Error(`API error ${response.status}`);
+        }
 
-                document.getElementById("summarized").innerText = data.answer;
-            }
+        const data = await response.json();
+        outputEl.innerText = data.answer;
+    } catch (error) {
+        outputEl.innerText = `Error: ${error.message}`;
+        console.error(error);
+    }
+}
 
 if (!localStorage.getItem("user_id")) {
     localStorage.setItem("user_id", crypto.randomUUID());
-    }
+}
